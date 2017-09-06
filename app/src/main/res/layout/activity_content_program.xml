@@ -37,12 +37,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:text="Minum Kopi/Teh"
+                    android:id="@+id/sarapan"
                     android:textColor="@color/colorTextPink"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
                 <CheckBox
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:id="@+id/cb_sarapan"
                     android:layout_weight="1"/>
 
             </LinearLayout>
@@ -68,11 +70,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:text="Minum Kopi/Teh"
+                    android:id="@+id/siang"
                     android:textColor="@color/colorTextPink"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
                 <CheckBox
                     android:layout_width="0dp"
+                    android:id="@+id/cb_siang"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"/>
 
@@ -99,11 +103,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:text="Minum Kopi/Teh"
+                    android:id="@+id/malam"
                     android:textColor="@color/colorTextPink"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
                 <CheckBox
                     android:layout_width="0dp"
+                    android:id="@+id/cb_malam"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"/>
 
@@ -130,12 +136,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:text="Minum Kopi/Teh"
+                    android:id="@+id/optional"
                     android:textColor="@color/colorTextPink"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
                 <CheckBox
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:id="@+id/cb_optional"
                     android:layout_weight="1"/>
 
             </LinearLayout>
@@ -156,6 +164,7 @@
             android:layout_weight="1"
             android:background="@drawable/button_1"
             android:text="Simpan"
+            android:id="@+id/simpan"
             android:textColor="@color/colorTextWhite"/>
     </LinearLayout>
 

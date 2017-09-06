@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryLight"
+    android:background="@color/colorDivider"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -19,40 +19,24 @@
             android:layout_marginRight="8dp"
             android:layout_marginLeft="8dp"
             android:orientation="vertical"
-            android:background="@color/colorPrimaryDark">
+            android:background="@color/colorWhite">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="3"
-                android:src="@drawable/ic_home" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:paddingRight="4dp"
-                android:paddingLeft="4dp"
-                android:gravity="center"
-                android:layout_marginBottom="8dp"
-                android:text="Metode Diet Puasa 30 Hari"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/colorTextWhite"
-                android:textStyle="bold" />
+                android:scaleType="fitXY"
+                android:src="@drawable/mayo" />
 
             <Button
-                android:id="@+id/button_program_1"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/button_3"
-                android:text="START"
+                android:text="Diet Soyo"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorTextPink"
-                android:textStyle="bold" />
-
-
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:background="@color/colorPrimaryDark"/>
         </LinearLayout>
 
         <LinearLayout
@@ -61,38 +45,25 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:layout_marginRight="8dp"
-            android:background="@color/colorPrimaryDark">
+            android:background="@color/colorWhite">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="3"
-                android:src="@drawable/ic_home" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:paddingRight="4dp"
-                android:paddingLeft="4dp"
-                android:gravity="center"
-                android:layout_marginBottom="8dp"
-                android:text="Metode Diet Mayo"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/colorTextWhite"
-                android:textStyle="bold" />
+                android:scaleType="fitXY"
+                android:src="@drawable/cleaneat" />
 
             <Button
-                android:id="@+id/button_program_2"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/button_3"
-                android:text="START"
+                android:text="Metode Clean Eating"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorTextPink"
-                android:textStyle="bold" />
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:background="@color/colorPrimaryDark"/>
+
 
         </LinearLayout>
 
@@ -103,48 +74,34 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
+            android:layout_marginRight="8dp"
             android:layout_marginLeft="8dp"
-            android:background="@color/colorPrimaryDark">
+            android:orientation="vertical"
+            android:background="@color/colorWhite">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="3"
-                android:src="@drawable/ic_home" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:paddingRight="4dp"
-                android:paddingLeft="4dp"
-                android:gravity="center"
-                android:layout_marginBottom="8dp"
-                android:text="Metode OCD"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/colorTextWhite"
-                android:textStyle="bold" />
+                android:scaleType="fitXY"
+                android:src="@drawable/foodcom" />
 
             <Button
-                android:id="@+id/button_program_3"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/button_3"
-                android:text="START"
+                android:text="Metode Food Combining"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorTextPink"
-                android:textStyle="bold" />
-
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:background="@color/colorPrimaryDark"/>
         </LinearLayout>
 
         <LinearLayout
@@ -152,42 +109,29 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:background="@color/colorPrimaryDark">
+            android:background="@color/colorWhite">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="3"
-                android:src="@drawable/ic_home" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:paddingRight="4dp"
-                android:paddingLeft="4dp"
-                android:gravity="center"
-                android:layout_marginBottom="8dp"
-                android:text="Metode Diet Puasa 30 Hari"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/colorTextWhite"
-                android:textStyle="bold" />
+                android:scaleType="fitXY"
+                android:src="@drawable/paleo" />
 
             <Button
-                android:id="@+id/button_program_4"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/button_3"
-                android:text="START"
+                android:text="Metode Paleo"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorTextPink"
-                android:textStyle="bold" />
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:background="@color/colorPrimaryDark"/>
+
 
         </LinearLayout>
+
 
     </LinearLayout>
 
