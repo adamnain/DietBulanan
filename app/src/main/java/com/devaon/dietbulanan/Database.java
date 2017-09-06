@@ -12,52 +12,26 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class Database extends SQLiteOpenHelper {
     //tabel user untuk menyimpan data user
     public static final String nama_db = "user.db";
-    public static final String tbuser = "tbuser";
+    public static final String tbUser = "tbuser";
     public static final String nama = "nama";
     public static final String jk = "jk";
     public static final String usia = "usia";
     public static final String tb = "tb";
     public static final String bb = "bb";
     //tabel materi tabel untuk menyimpan data materi
-    public static final String tbmateri = "tbmateri";
+    public static final String tbProgram = "tbmateri";
+    public static final String idMateri = "idmateri";
     public static final String judul = "judul";
     public static final String gambar = "gambar";
     public static final String konten = "konten";
-    public static final String linkvideo = "linkvideo";
+    public static final String linkVideo = "linkvideo";
     //tabel bulanan untuk menyimpan materi harian
-    public static final String tbharian = "tbharian";
-    public static final String hari= "hari";
+    public static final String tbHarian = "tbharian";
+    public static final String idHari= "hari";
     public static final String menu1 = "menu1";
     public static final String menu2= "menu2";
     public static final String menu3= "menu3";
-    public static final String menu4= "menu4";
-    public static final String menu5= "menu5";
-    public static final String menu6= "menu6";
-    public static final String menu7= "menu7";
-    public static final String menu8= "menu8";
-    public static final String menu9= "menu9";
-    public static final String menu10= "menu10";
-    public static final String menu11= "menu11";
-    public static final String menu12= "menu12";
-    public static final String menu13= "menu13";
-    public static final String menu14= "menu14";
-    public static final String menu15= "menu15";
-    public static final String menu16= "menu16";
-    public static final String menu17= "menu17";
-    public static final String menu18= "menu18";
-    public static final String menu19= "menu19";
-    public static final String menu20= "menu20";
-    public static final String menu21= "menu21";
-    public static final String menu22= "menu22";
-    public static final String menu23= "menu23";
-    public static final String menu24= "menu24";
-    public static final String menu25= "menu25";
-    public static final String menu26= "menu26";
-    public static final String menu27= "menu27";
-    public static final String menu28= "menu28";
-    public static final String menu29= "menu29";
-    public static final String menu30= "menu30";
-    public static final String ket= "ket";
+    public static final String ket = "ket";
 
     public Database(Context context){
         super(context, nama_db, null, 1);
@@ -65,17 +39,20 @@ public class Database extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table "+tbuser+" (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAMA STRING, JK STRING, USIA INTEGER, TB INTEGER, BB INTEGER )");
-        db.execSQL("create table "+tbharian+" (ID PRIMARY KEY, HARI INTEGER , MENU1 TEXT, MENU2 TEXT, MENU3 TEXT, KET TEXT)");
-        db.execSQL("create table "+tbmateri+" (ID INTEGER PRIMARY KEY AUTOINCREMENT, JUDUL STRING, GAMBAR STRING, KONTEN STRING, LINKVIDEO)");
+        db.execSQL("create table "+tbUser+" (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAMA TEXT, JK TEXT, USIA INTEGER, TB INTEGER, BB INTEGER )");
+        db.execSQL("create table "+tbHarian+" (IDHARI INTEGER , MENU1 TEXT, MENU2 TEXT, MENU3 TEXT, KET TEXT, IDPROGRAM)");
+        db.execSQL("create table "+tbProgram+" (IDMATERI INTEGER PRIMARY KEY AUTOINCREMENT, JUDUL TEXT, GAMBAR TEXT, KONTEN TEXT, LINKVIDEO TEXT)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        db.execSQL("drop table if exists "+tbuser);
+        db.execSQL("drop table if exists "+tbUser);
+        db.execSQL("drop table if exists "+tbHarian);
+        db.execSQL("drop table if exists "+tbProgram);
         onCreate(db);
     }
 
+    //BiodataActivity
     public boolean insertDataUser(String inama, String iusia, String itb, String ibb, String ijk){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -84,13 +61,23 @@ public class Database extends SQLiteOpenHelper {
         contentValues.put(usia, iusia);
         contentValues.put(tb, itb);
         contentValues.put(bb, ibb);
-        long result = db.insert(tbuser, null, contentValues);
+        long result = db.insert(tbUser, null, contentValues);
         if(result == - 1) {
             return false;
         }
         else {
             return true;
         }
+
+    }
+    public void dataContentProgram(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentProgram = new ContentValues();
+        contentProgram.put(idMateri, 1);
+        contentProgram.put(judul, "Diet Mayo");
+        contentProgram.put(gambar, "sayuran1");
+        contentProgram.put(konten, "Lorem ipsum");
+        contentProgram.put(linkVideo, "http://instagram.com/himatifuinbandung");
 
     }
 }

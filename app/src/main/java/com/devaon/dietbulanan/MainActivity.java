@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button buttonMenu = (Button) findViewById(R.id.menu_diet);
         Button buttonProgram = (Button) findViewById(R.id.program_diet);
-        Button buttonAbout = (Button) findViewById(R.id.about);
+        //Button buttonAbout = (Button) findViewById(R.id.about);
 
         buttonMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /*
         buttonAbout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,5 +41,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(a);
             }
         });
+        */
     }
 }
