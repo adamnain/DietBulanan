@@ -20,7 +20,7 @@ public class BiodataActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.biodata);
+        setContentView(R.layout.activity_biodata);
         myDb = new Database(this);
 
         nama = (EditText)findViewById(R.id.l_nama);
@@ -46,9 +46,9 @@ public class BiodataActivity extends AppCompatActivity {
             public void onClick(View view) {
                 boolean isInserted = myDb.insertDataUser(nama.getText().toString(), usia.getText().toString(), tb.getText().toString(), bb.getText().toString(), "perempuan");
                 if (isInserted = true)
-                    Toast.makeText(Biodata.this, "Data Inserted "+" ",Toast.LENGTH_LONG).show();
+                    Toast.makeText(BiodataActivity.this, "Data Inserted "+" ",Toast.LENGTH_LONG).show();
                 else
-                    Toast.makeText(Biodata.this, "Data not Inserted",Toast.LENGTH_LONG).show();
+                    Toast.makeText(BiodataActivity.this, "Data not Inserted",Toast.LENGTH_LONG).show();
             }
         });
     }
